@@ -1,6 +1,5 @@
 // DEPENDENCIES
 var path = require("path");
-var express = require("express");
 // ===========================================
 // ROUTING
 // ===========================================
@@ -8,6 +7,7 @@ module.exports = function(app) {
 
 
     app.get("/survey", function(res, req) {
+        console.log(res);
         res.sendFile(path.join(__dirname, "../public/survey.html"))
     }) 
 
