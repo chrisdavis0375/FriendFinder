@@ -28,12 +28,19 @@ module.exports = function(app) {
         var totalDifference = 0;
 
         for (var i = 0; i < friends.length; i++) {
-            //totalDifference = 0;
-            console.log(friends[i].name);
+            totalDifference = Math.abs(parseInt(Scores[j]) - parseInt(friends[i].Scores[j]));
+            if(totalDifference <= match.friendDifference) {
+                match.name = friends[i].name;
+                match.photo=friends[i].photo;
+                match.friendDifferenece = totalDifference;
+            }
 
 
             
         }
+
+        friends.push(Data);
+        res.json(match);
     })
 
 }
