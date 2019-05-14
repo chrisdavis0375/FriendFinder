@@ -6,7 +6,7 @@ var path = require("path");
 module.exports = function(app) {
 
 
-    app.get("/survey", function(res, req) {
+    app.get("/survey", function(req, res) {
         console.log(res);
         res.sendFile(path.join(__dirname, "../public/survey.html"))
     }) 
